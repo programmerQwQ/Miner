@@ -3,12 +3,12 @@ const pathfinder = require("mineflayer-pathfinder")
 
 const bot = mineflayer.createBot({
     host: "mc4.weeaxe.cn",
-    username: "aO_Oa"
+    username: "bot_name"
 })
 
 bot.loadPlugin(pathfinder.pathfinder)
 bot.once("spawn", () => {
-    bot.chat("/login aooa2217")
+    bot.chat("/login password")
 })
 
 var mode
@@ -31,7 +31,6 @@ function mine(block) {
     if (!targetBlock) {
         //取消注释可能会刷屏
         //bot.chat("I can't find " + block.displayName + "!")
-        console.log("I can't find " + block.displayName + "!")
         return
     }
     const x = targetBlock.position.x
